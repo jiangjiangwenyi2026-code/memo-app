@@ -1,0 +1,10 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/TimetablePage",
+    "pages/SettingsPage",
+    "pages/ArchivePage",
+    "pages/SearchPage",
+    "pages/HeatmapPage"
+  ]
+}

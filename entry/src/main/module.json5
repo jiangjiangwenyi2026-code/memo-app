@@ -1,0 +1,72 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "ohos.want.action.home"
+            ]
+          }
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "EntryBackupAbility",
+        "srcEntry": "./ets/entrybackupability/EntryBackupAbility.ets",
+        "type": "backup",
+        "exported": false,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ],
+      },
+      {
+        // 服务卡片的生命周期宿主：type 必须是 "form"，系统靠 ohos.extension.form 这条
+        // metadata 找到 form_config.json 里声明的卡片清单（尺寸、刷新策略、卡片页面路径）
+        "name": "EntryFormAbility",
+        "srcEntry": "./ets/entryformability/EntryFormAbility.ets",
+        "label": "$string:app_name",
+        "description": "$string:module_desc",
+        "type": "form",
+        "metadata": [
+          {
+            "name": "ohos.extension.form",
+            "resource": "$profile:form_config"
+          }
+        ]
+      }
+    ],
+    // 代理提醒权限：system_grant 级，只需声明不需运行时申请，不声明 publishReminder 必失败
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.PUBLISH_AGENT_REMINDER"
+      }
+    ]
+  }
+}

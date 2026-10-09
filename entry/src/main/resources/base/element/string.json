@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "备忘录"
+    },
+    {
+      "name": "card_display_name",
+      "value": "今日备忘"
+    },
+    {
+      "name": "card_desc",
+      "value": "桌面上一眼看到今天要做的事"
+    }
+  ]
+}

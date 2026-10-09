@@ -1,0 +1,18 @@
+/node_modules
+/oh_modules
+/local.properties
+/.idea
+**/build
+/.hvigor
+.cxx
+/.clangd
+/.clang-format
+/.clang-tidy
+**/.test
+/.appanalyzer
+# 本地备份与编译缓存（不上传）
+/.backup
+/.cache
+
+# 任意层级下的 hvigor 构建目录
+**/.hvigor
