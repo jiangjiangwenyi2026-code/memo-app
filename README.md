@@ -6,6 +6,14 @@
 
 完整的产品需求文档见 [REQUIREMENTS-AUDIT.md](REQUIREMENTS-AUDIT.md)。
 
+## 界面预览
+
+| 桌面服务卡片 | App 主界面 |
+|:---:|:---:|
+| <img src="docs/images/desktop-card.jpg" width="300"> | <img src="docs/images/main-screen.jpg" width="300"> |
+
+手机桌面上的服务卡片不点开就能一眼看全三块内容；操作（拖动、删除、搜索、缩放时间轴）都在点开后的全屏里做。
+
 ## 主要功能
 
 ### 三块版面
